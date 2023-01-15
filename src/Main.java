@@ -8,15 +8,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("WELCOME TO BLACKJACK!!");
         intro();
+
+        Slot game = new Slot(wallet);
+        game.start();
     }
 
     public static void intro() {
-        System.out.println("Enter your name: ");
+        System.out.print("Enter your name: ");
         String name = scan.nextLine();
         System.out.print("Enter the amount of money in your wallet (with decimals): ");
         double num = scan.nextDouble();
 
-        if (Math.numDigits(num) > 4 || Math.numDigits(num) < 2) {
+        if (Utility.numDigits(num) > 4 || Utility.numDigits(num) < 2) {
             System.out.println("Enter a valid amount.");
             intro();
         }

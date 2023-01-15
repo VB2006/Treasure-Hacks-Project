@@ -1,18 +1,27 @@
 public class Wallet {
     private String name;
-    private double balance;
+    private double originalBalance;
+    private double modifiedBalance;
 
     public Wallet(String name, double balance) {
         this.name = name;
-        this.balance = balance;
+        this.originalBalance = balance;
+        this.modifiedBalance = balance;
     }
 
-    public double getMoney() {
-        return balance;
+    public double getModifiedBalance() {
+        return modifiedBalance;
     }
 
-    public void setMoney(double balance) {
-        this.balance = balance;
+    public double getOriginalBalance() {
+        return originalBalance;
     }
 
+    public void setBalance(double balance) {
+        this.modifiedBalance = balance;
+    }
+
+    public String toString() {
+        return "Name: " + name + "\nOriginal balance: " + originalBalance + "\nNew balance: " + modifiedBalance;
+    }
 }

@@ -1,4 +1,4 @@
-public class Math {
+public class Utility {
 
     public static int numDigits(double n) {
         if (n <= 9) return 1;
