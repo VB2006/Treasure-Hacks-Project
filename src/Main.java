@@ -6,7 +6,7 @@ public class Main {
     static Wallet wallet;
 
     public static void main(String[] args) {
-        System.out.println("WELCOME TO BLACKJACK!!");
+        System.out.println("WELCOME TO SLOT!!");
         intro();
 
         Slot game = new Slot(wallet);

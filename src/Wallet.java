@@ -1,6 +1,6 @@
 public class Wallet {
     private String name;
-    private double originalBalance;
+    private final double originalBalance;
     private double modifiedBalance;
 
     public Wallet(String name, double balance) {

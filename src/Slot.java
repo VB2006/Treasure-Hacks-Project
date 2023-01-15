@@ -18,12 +18,12 @@ public class Slot {
         if ((creds / 4) > wallet.getModifiedBalance()) {
             System.out.println("Sorry, you do not have enough money. Retry with a valid value.");
             start();
-        } else if ((creds / 4) < 1) {
+        } else if (creds < 4) {
             System.out.println("Invalid input.");
             start();
         }
 
-        numArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        numArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
         rand1 = (int) (Math.random() * numArray.length);
         rand2 = (int) (Math.random() * numArray.length);
@@ -57,6 +57,7 @@ public class Slot {
     }
 
     public void retryPrompt() {
+        System.out.println("FUN FACT: 99% of gamblers quit before they hit the jackpot!");
         System.out.print("Would you like to play again? (Y/N): ");
         String confirm = scan.next();
 
